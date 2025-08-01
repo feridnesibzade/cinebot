@@ -1,0 +1,21 @@
+<?php
+
+namespace {{ namespace }};
+
+use Telegram\Bot\Commands\Conversation;
+
+class {{ class }} extends Conversation
+{
+    public function start(): void
+    {
+        // First step
+        $this->say('Conversation started');
+        $this->next('nextStep');
+    }
+
+    public function nextStep(): void
+    {
+        $this->say('And finished!');
+        $this->stop();
+    }
+}
