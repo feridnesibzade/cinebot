@@ -1,5 +1,19 @@
+# fly.toml app configuration file generated for scenario on 2025-08-02T22:48:22+04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'scenario'
+primary_region = 'otp'
+
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
+
   [build.args]
-    PHP_VERSION = "8.3"
-    NODE_VERSION = "18"
+    NODE_VERSION = '18'
+    PHP_VERSION = '8.3'
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
