@@ -1,0 +1,37 @@
+[31mOops, something went wrong! Could you try that again?[0m
+
+interface conversion: interface {} is nil, not *iostreams.IOStreams
+goroutine 1 [running]:
+runtime/debug.Stack()
+	/home/runner/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/runtime/debug/stack.go:26 +0x5e
+github.com/superfly/flyctl/internal/sentry.printError({0x31ad2e0, 0xc00072d170})
+	/home/runner/work/flyctl/flyctl/internal/sentry/sentry.go:190 +0x16a
+github.com/superfly/flyctl/internal/sentry.Recover({0x31ad2e0, 0xc00072d170})
+	/home/runner/work/flyctl/flyctl/internal/sentry/sentry.go:180 +0xb4
+main.run.func1()
+	/home/runner/work/flyctl/flyctl/main.go:40 +0x2f
+panic({0x31ad2e0?, 0xc00072d170?})
+	/home/runner/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.1.linux-amd64/src/runtime/panic.go:792 +0x132
+github.com/superfly/flyctl/iostreams.FromContext(...)
+	/home/runner/work/flyctl/flyctl/iostreams/context.go:15
+github.com/superfly/flyctl/internal/command/launch.run({0x3aa3ba0, 0xc00072d140})
+	/home/runner/work/flyctl/flyctl/internal/command/launch/cmd.go:270 +0x197c
+github.com/superfly/flyctl/internal/command/launch.RunPlan({0x3aa3ba0, 0xc00072d110}, {0x354c491?, 0x5023900?})
+	/home/runner/work/flyctl/flyctl/internal/command/launch/plan_commands.go:178 +0x54
+github.com/superfly/flyctl/internal/command/launch.runPropose({0x3aa3ba0, 0xc00072d020})
+	/home/runner/work/flyctl/flyctl/internal/command/launch/plan_commands.go:186 +0x169
+github.com/superfly/flyctl/internal/command/launch.newPropose.New.newRunE.func1(0xc00064b508, {0x353f392?, 0x4?, 0x353f1ba?})
+	/home/runner/work/flyctl/flyctl/internal/command/command.go:142 +0x1ca
+github.com/spf13/cobra.(*Command).execute(0xc00064b508, {0x5023900, 0x0, 0x0})
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.9.1/command.go:1015 +0xa94
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0001fc608)
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.9.1/command.go:1148 +0x40c
+github.com/spf13/cobra.(*Command).ExecuteContextC(...)
+	/home/runner/go/pkg/mod/github.com/spf13/cobra@v1.9.1/command.go:1080
+github.com/superfly/flyctl/internal/cli.Run({0x3aa3d60?, 0xc000430740?}, 0xc0003fb0e0, {0xc0000a4150, 0x3, 0x3})
+	/home/runner/work/flyctl/flyctl/internal/cli/cli.go:95 +0x7d6
+main.run()
+	/home/runner/work/flyctl/flyctl/main.go:47 +0x150
+main.main()
+	/home/runner/work/flyctl/flyctl/main.go:26 +0x18
+
