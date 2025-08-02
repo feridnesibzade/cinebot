@@ -1,4 +1,5 @@
 [build]
+  dockerfile = "Dockerfile"
   [build.args]
     PHP_VERSION = "8.3"
     NODE_VERSION = "18"
